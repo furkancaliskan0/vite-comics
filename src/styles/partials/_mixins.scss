@@ -3,8 +3,10 @@
 
     @if $type == 'vertical' {
         justify-content: center;
+        
     } @else if $type == 'horizontal' {
         align-items: center;
+
     }@else if $stype == 'both' {
         justify-content: center;
         align-items: center;
