@@ -2,12 +2,15 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
+import Jumbotron from './components/Jumbotron.vue'
 
 export default {
   components:{
     AppHeader,
+    Jumbotron,
     AppMain,
     AppFooter
+    
     
 
   }
@@ -15,10 +18,8 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
-  <main>
-    <h1>--> Content goes hear &lt;--</h1>
-  </main>
+  <AppHeader />
+  <jumbotron />
   <AppMain />
   <AppFooter />
 </template>
@@ -28,12 +29,6 @@ export default {
 @use './styles/general.scss' as*;
 @use './styles/partials/mixins' as*;
 
-main {
-  height: 100px;
-  background-color: #131212;
-  text-align: center;
-  line-height: 100px;
-}
 
 
 h1,
