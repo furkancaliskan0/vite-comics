@@ -63,7 +63,7 @@ export default {
 
 <template>
     <header>
-        <div class="index-header">
+        <div class="container">
             <nav>
                 <div class="dc-logo">
                     <a href="#">
@@ -88,12 +88,12 @@ export default {
 header {
     margin: 0 auto;
     width: 100%;
-    .index-header {
+    .container {
         width: 100%;
         margin: 0 auto;
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             .dc-logo {
                 text-align: center;
