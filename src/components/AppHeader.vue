@@ -5,52 +5,52 @@ export default {
         return {
             links: [
                 {
-                    text: "CHARACTERS",
+                    name: "CHARACTERS",
                     url: "#",
                     tap: "true",
                 },
                 {
-                    text: "COMICS",
+                    name: "COMICS",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "MOVIES",
+                    name: "MOVIES",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "TV",
+                    name: "TV",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "GAMES",
+                    name: "GAMES",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "COLLECTIBLES",
+                    name: "COLLECTIBLES",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "VIDEOS",
+                    name: "VIDEOS",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "FANS",
+                    name: "FANS",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "NEWS",
+                    name: "NEWS",
                     url: "#",
                     tap: "false",
                 },
                 {
-                    text: "SHOP",
+                    name: "SHOP",
                     url: "#",
                     tap: "false",
                 }
@@ -63,16 +63,18 @@ export default {
 
 <template>
     <header>
-        <div class="container">
+        <div class="index-header">
             <nav>
-                <div class="logo">
+                <div class="dc-logo">
                     <a href="#">
-                        <img src="../assets/images/dc-logo.png" alt="Dc-logo">
+                        <img src="/img/dc-logo.png" alt="Dc-logo">
                     </a>
                 </div>
-                <li v-for="(link, index) in links" :key="index" class="active">
-                    <a :href="link.url">{{ link.text }}</a>
-                </li>
+                <li v-for="(link, index) in links" :key="index">
+                        <a :class="{ active: links.tap }" :href="link.url">
+                            {{ link.name }}
+                        </a>
+                    </li>
             </nav>
         </div>
     </header>
@@ -86,18 +88,20 @@ export default {
 header {
     margin: 0 auto;
     width: 100%;
-    .container {
-        width: 80%;
+    .index-header {
+        width: 100%;
         margin: 0 auto;
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            .logo {
+            .dc-logo {
+                text-align: center;
                 width: 40%;
             }
             li{
                 list-style-type: none;
+                text-decoration: none;
                 padding: 3.5rem .5rem;
                 &:hover{
                     border-bottom: 5px solid $secondary;
